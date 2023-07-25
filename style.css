@@ -1,0 +1,104 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background : linear-gradient(135deg, #153677, #4e085f); 
+}
+.container{
+    background-color: white;
+    width : 100%;
+    max-width : 550px;
+    margin : 100px auto 20px;
+    padding : 40px 30px 70px;
+    border-radius : 10px;
+}
+.container h2{
+    color : #002765;
+    text-align : left;
+    
+}
+.container h2 img{
+    width : 30px;
+    margin-left : 10px;
+}
+
+.addTask{
+    margin : 10px auto;
+}
+#taskInput{
+    width : 70%;
+    padding : 20px;
+    outline : none;
+    border : none;
+    background : #edeef0;
+    border-radius : 30px;
+    font-size : 1.16rem;
+}
+#addBtn{
+    border : none;
+    outline : none;
+    background : #ff5945;
+    color : #fff;
+    cursor : pointer;
+    border-radius : 30px;
+    padding : 20px 30px;
+    font-size : 1.16rem;
+    position : relative;
+    right : 50px;
+    width : 25%;
+}
+
+.taskList{
+    margin : 20px;
+    list-style: none;
+}
+
+.taskList li{
+    font-size: 21px;
+    padding : 12px 12px 12px 50px;
+    position : relative;
+    cursor : pointer;
+}
+.taskList li::before{
+    content : '';
+    position : absolute;
+    height : 28px;
+    width : 28px;
+    border-radius : 50%;
+    background-image: url('./images/unchecked.png');
+    background-size: cover;
+    background-position: center;
+    top : 12px;
+    left : 8px;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    color : grey;
+    background: transparent;
+}
+ul li.checked::before{
+    background: url('./images/checked.png');
+    background-position: center;
+    background-size: cover;
+}
+ul li span{
+    position : absolute;
+    right : 0;
+    top : 5px;
+    width : 40px;
+    height : 40px;
+    font-size : 22px;
+    color : #555;
+    line-height : 40px;
+    text-align : center;
+}
+ul li span:hover{
+    background-color : #edeef0;
+    border-radius : 50%;
+}
